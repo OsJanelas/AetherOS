@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background: #004a7c; font-family: sans-serif; color: white; overflow: hidden; }
+        .grid { display: grid; grid-template-columns: repeat(4, 150px); gap: 10px; padding: 50px; }
+        .tile { height: 150px; padding: 10px; cursor: pointer; transition: 0.2s; }
+        .tile:hover { transform: scale(1.05); }
+        .blue { background: #00a1f1; } .green { background: #7eba00; } .orange { background: #ff8c00; }
+        #atari-canvas { display: none; background: black; border: 2px solid white; }
+    </style>
+</head>
+<body>
+    <h1>Iniciar</h1>
+    <div class="grid">
+        <div class="tile blue" onclick="alert(new Date())">Calendário</div>
+        <div class="tile green" onclick="window.open('https://www.google.com/search?q=calculadora')">Calculadora</div>
+        <div class="tile orange" onclick="startAtari()">Atari Breakout</div>
+        <div class="tile blue" onclick="document.body.style.background='black'">Tema Dark</div>
+    </div>
+    <canvas id="atari-canvas" width="400" height="300"></canvas>
+    <script>
+        function startAtari() { document.getElementById('atari-canvas').style.display='block'; /* Lógica de jogo aqui */ }
+    </script>
+</body>
+</html>
